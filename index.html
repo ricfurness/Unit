@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset=UTF-8>
+	<meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+	<title></title>
+
+	<link rel=stylesheet href=css/style.css>
+
+	<link rel="shortcut icon" href=icon.png>
+	<link rel=apple-touch-icon-precomposed href=icon.png>
+	<link type=text/plain rel=author href=humans.txt>
+
+	<script type="text/javascript" src="http://use.typekit.com/rnc6xlr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript' src='jquery.lettering-0.6.min.js'></script>
+
+	<!--<script type="text/javascript">
+
+		function getPos() {
+		var Pos = $(window).scrollTop();
+		return Pos;
+	}
+	
+	$(window).scroll(function() {
+		if(getPos()<455) {
+			$("nav").css('background','rgba(0,0,0,.75)');
+		}
+		else { 
+			$("nav").css('background','rgba(0,0,0,.95)');	
+		}
+	});
+
+
+	</script>-->
+
+	<script>
+  $(document).ready(function() {
+    $(".fancy_title").lettering();
+  });
+
+  </script>
+
+  <script>
+
+  $(document).ready(function(){
+
+    // load up the home logo, and start the animation
+    var bgOffset = 0;
+    var bgInterval;
+
+    $('#test').click(function() {
+        window.location = '/';
+    });
+
+    $('#test').mouseenter(function() {
+        bgInterval = setInterval(shiftImage, 50);
+
+        function shiftImage() {
+            bgOffset-=215;
+            if(Math.abs(bgOffset) >= 2400) {
+                bgOffset = 0;
+            }
+            $('#test').css('background-position', bgOffset);
+        }
+    });
+
+    $('#test').mouseleave(function() {
+        clearInterval(bgInterval);
+        $('#test').css('background-position', '0');
+    });
+
+});
+
+
+	</script>
+
+</head>
+<body>
+
+
+	<nav>
+
+		<div class="logo"><img src="img/stars.png" class="stars" /><img src="img/unit-black.jpg" /></div>
+
+		<ul>
+			<li>Studio</li>
+			<li>Expertise</li>
+			<li>Clients</li>
+			<li>Journal</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+
+
+
+	<div class="content">
+
+		<h3>We carefully craft</h3>
+		<h1 class="fancy_title">Engaging &amp; stimulating</h1>
+		<h2>Web sites that deliver results</h2>
+
+
+	</div>
+
+	<div class="white">
+
+	<div class="inner">
+
+		<div class="para">
+
+		<span class="opening">Welcome to <span class="shlurple">Unit Creative</span> - a micro-team of web-centric professionals.<br />We provide web design and development services for clients across the world.</span><!--<span class="button"><img src="img/tick.png">&nbsp;&nbsp;Available for hire</span>-->
+
+		</div>
+
+		<div class="quarter">Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<br /><br />Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.<br /><br />Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.<br /><br /><span class="button">Learn More</span></div>
+		<div class="quarter"><!--<div id="test"></div>--><img src="img/axe.jpg" /><h6>1. Discovery</h6>Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor.</div>
+		<div class="quarter"><img src="img/design.jpg" /><h6>2. Design</h6>Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor.</div>
+		<div class="quarter"><img src="img/build.jpg" /><h6>3. Build</h6>Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor.</div>
+
+		<div class="clear"></div>
+
+		<div class="blahblah">
+		<div class="quarter"><img src="img/small.jpg" /><br /><br />Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor.</div>
+		<div class="quarter"><img src="img/small.jpg" /><br /><br />Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Curabitur blandit tempus porttitor.</div>
+		<div class="half">
+
+			<span class="postdate">Monday, 23rd April 2012</span><br /><span class="posttitle">The launch of Unit Creative</span><span class="readmore">Read >></span><br /><br /><br />
+			<span class="postdate">Monday, 23rd April 2012</span><br /><span class="posttitle">The launch of Unit Creative</span><span class="readmore">Read >></span><br /><br /><br />
+			<span class="postdate">Monday, 23rd April 2012</span><br /><span class="posttitle">The launch of Unit Creative</span><span class="readmore">Read >></span><br /><br /><br />
+
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>

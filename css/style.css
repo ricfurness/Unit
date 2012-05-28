@@ -1,0 +1,791 @@
+@charset "UTF-8";
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+RESET
+SHARED
+CLEARFIX
+MAIN
+NAV
+MEDIA
+ISLAND
+TYPE
+IMAGES
+TABLES
+MISC
+*/
+
+
+
+
+
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+/*
+A more considered reset; more of a restart... As per: csswizardry.com/2011/10/reset-restarted
+*/
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
+a,abbr,address,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strong,sub,sup,tt,var,
+b,u,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+	margin:0;
+	padding:0;
+}
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section{
+	display:block;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+strong,b,mark{
+	font-weight:bold;
+	font-style:inherit;
+}
+em,i,cite,q,address,dfn,var{
+	font-style:italic;
+	font-weight:inherit;
+}
+abbr[title],dfn[title]{
+	cursor:help;
+	border-bottom:1px dotted;
+}
+ins{
+	border-bottom:1px solid;
+}
+a,u,ins{
+	text-decoration:none;
+}
+del,s{
+	text-decoration:line-through;
+}
+pre,code,samp,kbd{
+	font-family:monospace;
+}
+small{
+	font-size:0.75em;
+}
+img{
+	border:none;
+	font-style:italic;
+}
+input,
+select,option,optgroup,
+textarea{
+	font:inherit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$SHARED
+\*------------------------------------*/
+/* Common margin-bottom for vertical rhythm. */
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+p,
+table,
+form,
+pre,
+hr,
+.source{
+	margin-bottom:Xpx;
+	margin-bottom:Xrem;
+}
+
+/* Default indentation value for lists etc. */
+ul,ol,dd{
+	margin-left:Xem;
+}
+
+label,
+.text-input,
+textarea,
+.btn{
+	cursor:pointer;
+}
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus{
+	cursor:text;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$CLEARFIX
+\*------------------------------------*/
+/*
+Big up @necolas: nicolasgallagher.com/micro-clearfix-hack
+*/
+.media:before,
+.media:after,
+.island:before,
+.island:after,
+.islet:before,
+.islet:after,
+.cf:before,
+.cf:after{
+	content:"";
+	display:table;
+}
+.media:after,
+.island:after,
+.islet:after,
+.cf:after{
+	clear:both;
+}
+.media,
+.island,
+.islet,
+.cf{
+	zoom:1;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MAIN
+\*------------------------------------*/
+html{
+	overflow-y:scroll;
+	line-height:1.5; /* A safe and comfortable default for body copy at any size. */
+	/*background: url('../img/cityscape-compressed.jpg') no-repeat center center fixed;*/
+	/*background: url('../img/purple.jpg') no-repeat center center fixed;*/
+	/*background: url('../img/red-texture.png');*/
+	/*background: #4f3a72;*/
+	background: #E85225;
+	}
+
+nav {
+	width: 100%;
+	height: 75px;
+	background: rgba(0,0,0,1);
+	font-family: "futura-pt",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color: #ffffff;
+	text-transform: uppercase;
+	position: fixed;
+	/*transition: 0.15s; -moz-transition: 0.15s; -webkit-transition: 0.15s; -o-transition: 0.15s;*/
+}
+
+.shlurple {
+	font-weight: bold;
+	color: #E85225;
+}
+
+.blahblah {
+	margin-top: 35px;
+	padding: 25px 0;
+	background: url('http://www.subtlepatterns.com/patterns/white_wave.png') repeat-x #fff;
+}
+
+nav ul {
+	padding: 28px 100px;
+	float: right;
+}
+
+nav ul li {
+	float: left;
+	padding: 0px 18px;
+	list-style-type: none;
+	border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+nav ul li:nth-of-type(5) {
+	border-right: none;
+}
+
+nav ul li:hover {
+	color: #f44a33;
+	cursor: pointer;
+}
+
+nav .logo {
+	float: left;
+	padding: 7px 100px;
+	font-size: 22px;
+}
+
+.content {
+	width: 85%;
+	/*width: 1022px;*/
+	margin: 0 auto;
+	/*padding: 360px 0 180px 0;*/
+	padding: 180px 0 0 0;
+}
+
+.inner {
+	width: 85%;
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 45px 0;
+	font: 400 18px/28px 'proxima-nova';
+	-webkit-font-smoothing: antialiased;
+	color: #666666;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, .4);
+}
+
+.introduction {
+	width: 60%;
+	float: left;
+	margin-right: 20px;
+}
+
+.box {
+	width: 30%;
+	float: right;
+	padding: 30px;
+	background: #f5f5f5;
+}
+
+.bottom {
+	width: 90%;
+	border-top: 1px solid #e5e5e5;
+	margin: 50px 0;
+	padding: 50px 0;
+}
+
+.three {
+	width: 30%;
+	margin-right: 30px;
+	float: left;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+h1, h2, h4 {
+	font-family: 'futura-pt','proxima-nova',sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 68px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	text-shadow: 0px 2px 0px rgba(0,0,0,0.2);
+}
+
+h2 {
+	font-size: 32px;
+	border-bottom: none;
+	letter-spacing: 6px;
+	font-weight: 700;
+	padding: 16px 0;
+}
+
+h3 {
+	font-family: 'ff-market-web',serif;
+	color: #fff;
+	font-size: 38px;
+	font-weight: 400;
+	text-shadow: 0px 1px 0 rgba(0,0,0,0.2);
+	padding: 0;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+h4 {
+	color: #36a4a5;
+	font-size: 24px;
+	text-shadow: none;
+	text-align: left;
+	letter-spacing: 1px;
+	margin-bottom: 35px;
+	/*border-left: 2px solid #36a4a5;*/
+	padding: 5px 0;
+	border-bottom: none;
+}
+
+.white {
+	width: 100%;
+	min-height: 1000px;
+	margin-top: 100px;
+	background: #ffffff;
+	/*background: url('../img/dots.png') #fff;*/
+	/*background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 2%, rgb(251,251,251) 100%);*/  
+	
+}
+
+.grey {
+	width: 100%;
+	margin-top: 50px;
+	background: #fbfbfb;
+	border-top: 1px solid #e5e5e5;
+	
+}
+
+.button {
+	display: inline-block;
+	padding: 5px 10px;
+	background: #534476;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'proxima-nova-condensed';
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 2px;
+	margin: 10px 0;
+	-webkit-transition: all 0.25s linear;
+	text-shadow: none;
+}
+
+.button:hover {
+	padding: 5px 20px;
+	cursor: pointer;
+	background: #44335f;
+}
+
+.blog {
+	background: #36a4a5;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'proxima-nova';
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-shadow: 2px 1px 0 rgba(0,0,0,0.2);
+}
+
+.round {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 100px;
+	background: #36a4a5;
+	font-family: 'futura-pt','proxima-nova';
+	font-weight: 700;
+	font-size: 38px;
+	padding: 10px;
+	color: #ffffff;
+	text-shadow: 2px 1px 0 rgba(0,0,0,0.2);
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.para {
+	width: 100%;
+	border-bottom: 1px solid #e3e3e3;
+	padding-bottom: 40px;
+}
+
+.opening {
+	font-family: 'proxima-nova';
+	font-size: 20px;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+}
+
+.quarter, .half {
+	/*width: 215px;*/
+	width: 20%;
+	margin-right: 6%;
+	float: left;
+	padding-top: 40px;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.half {
+/*	width:484px;*/
+	width: 45%;
+	margin-right: 0;
+}
+
+
+.quarter:nth-of-type(5) {
+	margin-right: 0;
+}
+
+h6 {
+	font-family: 'proxima-nova','kulturista-web';
+	font-size: 26px;
+	font-weight: 400;
+	margin: 20px 0;
+	color: #4f3a72;
+}
+
+.posttitle {
+	font-size: 20px;
+	color: #4f3a72;
+}
+
+.readmore {
+	font-family: 'proxima-nova-condensed';
+	background: #d6d6d6;
+	float: right;
+	height: 30px;
+	width: 70px;
+	color: #464646;
+	text-align: center;
+	padding-top: 8px;
+	font-weight: 700;
+	border-radius: 2px;
+	-webkit-transition: all 0.2s linear;
+}
+
+.readmore:hover {
+	background: #4f3a72;
+	color: #fff;
+	text-shadow: none;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/*img.stars {
+	-webkit-transition: all .25s linear;
+}
+
+img.stars:hover {
+	-webkit-transform: scale(0.9);
+}*/
+
+.char17 {
+vertical-align: top;
+}
+
+.char18 {
+vertical-align: top;
+margin-left: 6px;
+}
+
+.char19 {
+vertical-align: top;
+}
+
+.char20 {
+vertical-align: top;
+margin-left: 2px;
+}
+
+.char16 {
+vertical-align: top;
+margin-left: 1px;
+}
+
+.char15 {
+vertical-align: top;
+margin-left: 3px;
+}
+
+.char14 {
+vertical-align: top;
+margin-left: 3px;
+}
+
+.char2 {
+vertical-align: top;
+}
+
+.char3 {
+vertical-align: top;
+margin-left: -1px;
+}
+
+.char13 {
+vertical-align: top;
+}
+
+.char5 {
+vertical-align: top;
+margin-left: -2px;
+}
+
+.char10 {
+vertical-align: top;
+margin-left: 18px;
+}
+
+.char12 {
+vertical-align: top;
+margin-left: 17px;
+}
+
+#test {
+	display: inline-block;
+	width: 215px;
+	height: 215px;
+	background: url('../img/axe-bg.jpg');
+	background-position: 0 50%;
+}
+
+/*------------------------------------*\
+	$NAV
+\*------------------------------------*
+/*
+As per: csswizardry.com/2011/09/the-nav-abstraction
+*/
+.nav{
+	list-style:none;
+	margin-left:0;
+}
+	.nav li{
+		display:inline;
+	}
+		.nav a{
+			display:inline-block;
+		}}
+
+/*------------------------------------*\
+	$MEDIA
+\*------------------------------------*/
+/*
+As per: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+*/
+.media{
+    display:block;
+}
+    .img{
+        float:left;
+        margin-right:Xpx;
+    }
+    
+    /* Reversed image location (right instead of left). */
+    .img-rev{
+        float:right;
+        margin-left:Xpx;
+    }
+        .img img{
+            display:block;
+        }
+    .body{
+        overflow:hidden;
+    }
+        .body > :last-child{
+            margin-bottom:0;
+        }
+
+/*
+Islets have a slightly smaller padding value than normal.
+With this in mind we make the `.img` spacing a little smaller for visual consistency.
+*/
+.islet .img{
+    margin-right:Xpx;
+}
+.islet .img-rev{
+    margin-left:Xpx;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$ISLAND
+\*------------------------------------*/
+/*
+As per csswizardry.com/2011/10/the-island-object
+*/
+.island,
+.islet{
+    display:block;
+    -webkit-border-radius:Xpx;
+       -moz-border-radius:Xpx;
+            border-radius:Xpx;
+}
+.island{
+    padding:Xpx;
+}
+    .island > :last-child,
+    .islet > :last-child{
+        margin-bottom:0;
+    }
+
+/* Just like `.island`, only smaller. */
+.islet{
+    padding:Xpx;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$TYPE
+\*------------------------------------*/
+/*--- SCALE ---*/
+/*
+As per csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+*/
+
+/* Large */
+.giga{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+.mega{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+.kilo{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+
+/* Headings */
+/* Generic heading class, as per: jsfiddle.net/csswizardry/yFQDP */
+.hN{}
+
+h1,.alpha{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+h2,.beta{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+h3,.gamma{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+h4,.delta{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+h5,.epsilon{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+h6,.zeta{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+
+/* Small */
+small,.milli{
+	font-size:Xpx;
+	font-size:Xrem;
+	line-height:;
+}
+
+/*--- LINKS ---*/
+a{}
+    a:hover,
+    a:focus,
+    a:active{
+        text-decoration:underline;
+    }
+
+/* Basic styling for any 'current' links. */
+.current a{
+    cursor:text;
+    text-decoration:underline;
+}
+
+/*--- LISTS ---*/
+li > ul,
+li > ol{
+	margin-bottom:0;
+}
+
+/*--- QUOTES ---*/
+/*
+Big up @boblet: html5doctor.com/blockquote-q-cite
+*/
+q{ quotes:"‘" "’" "“" "”"; }
+
+q:before{ content:"‘"; content:open-quote; }
+q:after{ content:"’"; content:close-quote; }
+
+q q:before{ content: "“"; content: open-quote; }
+q q:after{ content: "”"; content: close-quote; }
+
+blockquote{ quotes: "“" "”"; }
+blockquote p:before{ content: "“"; content: open-quote; }
+blockquote p:after{ content: ""; content: no-close-quote; }
+blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
+
+blockquote{
+	text-indent:-0.4em;
+}
+.source{
+	display:block;
+	text-indent:0;
+	margin-top:-Xpx;
+	margin-top:-Xrem;
+}
+.source:before{
+	content:"—";
+}
+
+
+
+
+
+/*------------------------------------*\
+	$IMAGES
+\*------------------------------------*/
+img{
+	max-width:100%;
+	height:auto;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$TABLES
+\*------------------------------------*/
+table{
+	width:100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+.accessibility              { position:absolute; left:-99999px; }
+[dir=rtl] .accessibility    { left:auto; right:-99999px; }
+
+/*
+Helper class to carry brand colours etc as per speakerdeck.com/u/csswizardry/p/breaking-good-habits?slide=31
+*/
+.brand{
+	color:;
+}
